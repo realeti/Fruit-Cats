@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="GameScreen" id="Y6W-OH-hqX" customClass="GameViewController" customModule="Fruit_Cats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlk-w2-DO0">
+                                <rect key="frame" x="360" y="84" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5hC-C1-u2Y"/>
+                                    <constraint firstAttribute="width" constant="50" id="f1s-8o-nbn"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="pause-button"/>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Twp-w2-yYH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGY-sQ-qWf">
+                                <rect key="frame" x="20" y="84" width="320" height="36"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Score: 0">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="30"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="place-board" translatesAutoresizingMaskIntoConstraints="NO" id="Kpr-no-aXx">
+                                <rect key="frame" x="20" y="128" width="128" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="045-zu-aIs"/>
+                                    <constraint firstAttribute="width" constant="128" id="kZi-i8-AkL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="m7A-kS-OnF">
+                                <rect key="frame" x="35" y="139.66666666666666" width="28" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="b0g-jl-gYX"/>
+                                    <constraint firstAttribute="width" constant="28" id="cLX-Ss-IfF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="XQH-94-BzE">
+                                <rect key="frame" x="70" y="139.66666666666666" width="28" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="OrS-4H-P28"/>
+                                    <constraint firstAttribute="height" constant="24" id="uW2-g7-AQ2"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="Hgu-MV-EW1">
+                                <rect key="frame" x="105" y="139.66666666666666" width="28" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Qr5-Go-vGD"/>
+                                    <constraint firstAttribute="width" constant="28" id="rdY-cU-Uxr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wGY-sQ-qWf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="2RW-jl-nYv"/>
+                            <constraint firstItem="Hgu-MV-EW1" firstAttribute="trailing" secondItem="Kpr-no-aXx" secondAttribute="trailing" constant="-15" id="Gv7-jN-ayi"/>
+                            <constraint firstItem="XQH-94-BzE" firstAttribute="centerY" secondItem="Kpr-no-aXx" secondAttribute="centerY" id="M5Z-KI-t6j"/>
+                            <constraint firstItem="Kpr-no-aXx" firstAttribute="top" secondItem="wGY-sQ-qWf" secondAttribute="bottom" constant="8" id="Pvz-75-Ua8"/>
+                            <constraint firstItem="Kpr-no-aXx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="SPF-DK-AqJ"/>
+                            <constraint firstItem="wlk-w2-DO0" firstAttribute="leading" secondItem="wGY-sQ-qWf" secondAttribute="trailing" constant="20" id="TdR-Ab-ryd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wlk-w2-DO0" secondAttribute="trailing" constant="20" id="itQ-g9-eGS"/>
+                            <constraint firstItem="m7A-kS-OnF" firstAttribute="centerY" secondItem="Kpr-no-aXx" secondAttribute="centerY" id="itc-tS-oQQ"/>
+                            <constraint firstItem="wGY-sQ-qWf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="lHn-BN-ebD"/>
+                            <constraint firstItem="wlk-w2-DO0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="lS4-ap-NwK"/>
+                            <constraint firstItem="XQH-94-BzE" firstAttribute="centerX" secondItem="Kpr-no-aXx" secondAttribute="centerX" id="qpA-kr-qgH"/>
+                            <constraint firstItem="Hgu-MV-EW1" firstAttribute="centerY" secondItem="Kpr-no-aXx" secondAttribute="centerY" id="zqF-bk-Tav"/>
+                            <constraint firstItem="m7A-kS-OnF" firstAttribute="leading" secondItem="Kpr-no-aXx" secondAttribute="leading" constant="15" id="zvI-Pg-U6S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageHeart1" destination="m7A-kS-OnF" id="ant-gU-7Or"/>
+                        <outlet property="imageHeart2" destination="XQH-94-BzE" id="rZP-9L-h0F"/>
+                        <outlet property="imageHeart3" destination="Hgu-MV-EW1" id="hMT-Ev-a67"/>
+                        <outlet property="imageHeartPlace" destination="Kpr-no-aXx" id="kvr-Bo-DR4"/>
+                        <outlet property="pauseButton" destination="wlk-w2-DO0" id="kbi-dI-wL7"/>
+                        <outlet property="scoreLabel" destination="wGY-sQ-qWf" id="tqF-Rh-0h2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" width="47" height="40"/>
+        <image name="pause-button" width="90" height="90"/>
+        <image name="place-board" width="255" height="93.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

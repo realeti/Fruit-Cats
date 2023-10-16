@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HB7-Zy-0th">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Menu View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="MainMenuViewController" customModule="Fruit_Cats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBackground" translatesAutoresizingMaskIntoConstraints="NO" id="2Vf-sU-6zd">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3U-6l-P6R">
+                                <rect key="frame" x="60" y="281" width="310" height="103.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="o3U-6l-P6R" secondAttribute="height" multiplier="3:1" id="N56-qy-Qnz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Play" backgroundImage="place-button"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="JGg-D6-WGE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s63-cG-WwF">
+                                <rect key="frame" x="60" y="414.33333333333331" width="310" height="103.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s63-cG-WwF" secondAttribute="height" multiplier="3:1" id="d1P-FO-8iM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Records" backgroundImage="place-button"/>
+                                <connections>
+                                    <action selector="recordsButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="D6S-2i-pXx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbt-8K-Ggj">
+                                <rect key="frame" x="60" y="547.66666666666663" width="310" height="103.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nbt-8K-Ggj" secondAttribute="height" multiplier="3:1" id="DNj-lD-zwe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Settings" backgroundImage="place-button"/>
+                                <connections>
+                                    <action selector="settingsButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="XrK-Cb-V5h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nbt-8K-Ggj" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="60" id="3Bu-C7-4aj"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="o3U-6l-P6R" secondAttribute="trailing" constant="60" id="8Rw-kX-FBM"/>
+                            <constraint firstItem="2Vf-sU-6zd" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="Fa9-jE-bne"/>
+                            <constraint firstAttribute="bottom" secondItem="2Vf-sU-6zd" secondAttribute="bottom" id="JVH-8J-Zvt"/>
+                            <constraint firstItem="s63-cG-WwF" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="K7U-Hc-FZI"/>
+                            <constraint firstItem="s63-cG-WwF" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="60" id="LEF-Vu-NBn"/>
+                            <constraint firstItem="2Vf-sU-6zd" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="Zql-xj-Hf3"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="s63-cG-WwF" secondAttribute="trailing" constant="60" id="ajE-cj-Mqy"/>
+                            <constraint firstItem="2Vf-sU-6zd" firstAttribute="trailing" secondItem="4qk-I5-YsI" secondAttribute="trailing" id="hFN-Wt-gPP"/>
+                            <constraint firstItem="s63-cG-WwF" firstAttribute="top" secondItem="o3U-6l-P6R" secondAttribute="bottom" constant="30" id="nBS-yB-h50"/>
+                            <constraint firstItem="nbt-8K-Ggj" firstAttribute="top" secondItem="s63-cG-WwF" secondAttribute="bottom" constant="30" id="oqF-Ja-ZN6"/>
+                            <constraint firstItem="o3U-6l-P6R" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="60" id="oyG-uQ-xjj"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="nbt-8K-Ggj" secondAttribute="trailing" constant="60" id="qYh-MD-JFp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XX4-xi-U7m"/>
+                    <connections>
+                        <outlet property="playButton" destination="o3U-6l-P6R" id="Jrt-Ls-nYc"/>
+                        <outlet property="recordsButton" destination="s63-cG-WwF" id="toN-0w-aWO"/>
+                        <outlet property="settingsButton" destination="nbt-8K-Ggj" id="HIU-aQ-ufv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="-28"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q2p-LB-fwU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HB7-Zy-0th" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZB7-pr-CRD">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="relationship" relationship="rootViewController" id="76I-Rs-uo1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vGZ-7t-49C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mainBackground" width="637.5" height="1389"/>
+        <image name="place-button" width="466.5" height="156"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

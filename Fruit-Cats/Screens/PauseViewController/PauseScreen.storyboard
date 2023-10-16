@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pause View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PauseScreen" id="Y6W-OH-hqX" customClass="PauseViewController" customModule="Fruit_Cats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.90000000000000002" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ie4-Yz-Qlt">
+                                <rect key="frame" x="40" y="189" width="350" height="263"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info-board" translatesAutoresizingMaskIntoConstraints="NO" id="oeI-vg-dTw">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="263"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgC-vV-dPd">
+                                        <rect key="frame" x="125" y="101.66666666666669" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="S8F-tj-TrC"/>
+                                            <constraint firstAttribute="height" constant="100" id="m4v-w5-EaV"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="resume-button"/>
+                                        <connections>
+                                            <action selector="resumeButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aKr-RM-Ygd"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAUSE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUK-JW-SdJ">
+                                        <rect key="frame" x="0.0" y="29.999999999999996" width="350" height="46.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JUK-JW-SdJ" firstAttribute="top" secondItem="Ie4-Yz-Qlt" secondAttribute="top" constant="30" id="E4x-tN-DN9"/>
+                                    <constraint firstItem="mgC-vV-dPd" firstAttribute="centerX" secondItem="Ie4-Yz-Qlt" secondAttribute="centerX" id="G3U-Wy-IFV"/>
+                                    <constraint firstItem="mgC-vV-dPd" firstAttribute="top" secondItem="JUK-JW-SdJ" secondAttribute="bottom" constant="25" id="Rmb-V4-pZh"/>
+                                    <constraint firstAttribute="bottom" secondItem="oeI-vg-dTw" secondAttribute="bottom" id="Uz7-9r-bhX"/>
+                                    <constraint firstItem="JUK-JW-SdJ" firstAttribute="leading" secondItem="Ie4-Yz-Qlt" secondAttribute="leading" id="X1v-fP-gQb"/>
+                                    <constraint firstAttribute="width" secondItem="Ie4-Yz-Qlt" secondAttribute="height" multiplier="1.33/1" id="YnS-PW-41R"/>
+                                    <constraint firstItem="oeI-vg-dTw" firstAttribute="leading" secondItem="Ie4-Yz-Qlt" secondAttribute="leading" id="dSD-Xt-0I0"/>
+                                    <constraint firstItem="oeI-vg-dTw" firstAttribute="top" secondItem="Ie4-Yz-Qlt" secondAttribute="top" id="mD6-qD-MTS"/>
+                                    <constraint firstAttribute="trailing" secondItem="JUK-JW-SdJ" secondAttribute="trailing" id="wDB-hZ-gFy"/>
+                                    <constraint firstAttribute="trailing" secondItem="oeI-vg-dTw" secondAttribute="trailing" id="x49-Jh-Ha8"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bE1-zO-Y3f">
+                                <rect key="frame" x="60" y="496.99999999999994" width="310" height="103.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bE1-zO-Y3f" secondAttribute="height" multiplier="3:1" id="S8p-lW-qim"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Main menu" backgroundImage="place-button"/>
+                                <connections>
+                                    <action selector="mainMenuButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5OG-25-qlR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWn-I2-bZL">
+                                <rect key="frame" x="60" y="630.33333333333337" width="310" height="103.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mWn-I2-bZL" secondAttribute="height" multiplier="3:1" id="hTj-eI-Eck"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Settings" backgroundImage="place-button"/>
+                                <connections>
+                                    <action selector="settingsButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eo3-zl-S8i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bE1-zO-Y3f" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="0dZ-LZ-uhP"/>
+                            <constraint firstItem="Ie4-Yz-Qlt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="130" id="EMZ-ha-rdm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mWn-I2-bZL" secondAttribute="trailing" constant="60" id="JBj-Sj-ymS"/>
+                            <constraint firstItem="Ie4-Yz-Qlt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="Xtn-Vl-wcM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ie4-Yz-Qlt" secondAttribute="trailing" constant="40" id="aR3-IU-odw"/>
+                            <constraint firstItem="mWn-I2-bZL" firstAttribute="top" secondItem="bE1-zO-Y3f" secondAttribute="bottom" constant="30" id="bfk-2R-XDe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bE1-zO-Y3f" secondAttribute="trailing" constant="60" id="fM1-md-TIX"/>
+                            <constraint firstItem="mWn-I2-bZL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="pp8-r8-c75"/>
+                            <constraint firstItem="bE1-zO-Y3f" firstAttribute="top" secondItem="Ie4-Yz-Qlt" secondAttribute="bottom" constant="45" id="yty-8e-guv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainMenuButton" destination="bE1-zO-Y3f" id="Z5i-8P-4Uk"/>
+                        <outlet property="pauseLabel" destination="JUK-JW-SdJ" id="GvJ-ys-bdw"/>
+                        <outlet property="settingsButton" destination="mWn-I2-bZL" id="zzU-3j-Rg4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info-board" width="511" height="383"/>
+        <image name="place-button" width="466.5" height="156"/>
+        <image name="resume-button" width="130" height="130.5"/>
+    </resources>
+</document>
