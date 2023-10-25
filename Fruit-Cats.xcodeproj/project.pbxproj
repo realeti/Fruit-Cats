@@ -305,7 +305,7 @@
 		C69DF9AE2AC082E800EF31BF = {
 			isa = PBXGroup;
 			children = (
-				C69DF9B92AC082E800EF31BF /* Yummy-Fruits */,
+				C69DF9B92AC082E800EF31BF /* Fruit-Cats */,
 				C69DF9B82AC082E800EF31BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -318,7 +318,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C69DF9B92AC082E800EF31BF /* Yummy-Fruits */ = {
+		C69DF9B92AC082E800EF31BF /* Fruit-Cats */ = {
 			isa = PBXGroup;
 			children = (
 				C6DE36282ACED20300502D40 /* Info.plist */,
@@ -330,7 +330,7 @@
 				C647141E2AC457EC00C31FC3 /* Screens */,
 				C69DF9BA2AC082E800EF31BF /* AppDelegate.swift */,
 			);
-			path = "Yummy-Fruits";
+			path = "Fruit-Cats";
 			sourceTree = "<group>";
 		};
 		C69F96E82AD30E9C00614C2E /* Hearts */ = {
@@ -414,7 +414,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C69DF9B22AC082E800EF31BF /* Build configuration list for PBXProject "Yummy-Fruits" */;
+			buildConfigurationList = C69DF9B22AC082E800EF31BF /* Build configuration list for PBXProject "Fruit-Cats" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -652,7 +652,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YB22355TMP;
+				DEVELOPMENT_TEAM = 69M929ZQ47;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Fruit-Cats/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Yummy Fruits";
@@ -668,7 +668,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xd.rotaeno.googlepla;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uk-servers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -686,7 +686,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YB22355TMP;
+				DEVELOPMENT_TEAM = 69M929ZQ47;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Fruit-Cats/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Yummy Fruits";
@@ -702,7 +702,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xd.rotaeno.googlepla;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uk-servers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -716,7 +716,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C69DF9B22AC082E800EF31BF /* Build configuration list for PBXProject "Yummy-Fruits" */ = {
+		C69DF9B22AC082E800EF31BF /* Build configuration list for PBXProject "Fruit-Cats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C69DF9CC2AC082EA00EF31BF /* Debug */,
