@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var imageHeart2: UIImageView!
     @IBOutlet weak var imageHeart3: UIImageView!
     @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var levelLabel: UILabel!
     
     var gameScene: GameScene?
     var pauseViewController: PauseViewController?
@@ -25,6 +26,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         configureScoreLabel()
         configureHeartPlace()
+        configureLevelLabel()
         
         loadGameScene()
         setupPauseViewController()
@@ -45,6 +47,17 @@ class GameViewController: UIViewController {
         imageHeartPlace.alpha = 0.8
     }
     
+    func configureLevelLabel(level: Int = 1) {
+        let levelText = "\(Constants.level): \(level)"
+        let text = GameText.getAttributedText(
+            for: levelText,
+            size: 23.0,
+            strokeWidth: -6.0,
+            strokeColor: .orange
+        )
+        levelLabel.attributedText = text
+    }
+    
     func loadGameScene() {
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
@@ -60,6 +73,7 @@ class GameViewController: UIViewController {
             }
             
             //view.showsPhysics = true
+            //view.showsNodeCount = true
             view.ignoresSiblingOrder = true
         }
     }
@@ -103,6 +117,10 @@ extension GameViewController: GameSceneProtocol {
         case .heart3:
             imageHeart3.isHidden = isSubtract
         }
+    }
+    
+    func updateLevel(level: Int) {
+        configureLevelLabel(level: level)
     }
     
     func pauseGame() {

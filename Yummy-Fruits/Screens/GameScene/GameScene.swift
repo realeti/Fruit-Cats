@@ -27,6 +27,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var arrowLeft: SKSpriteNode!
     var arrowRight: SKSpriteNode!
     var multiScoreLabel: SKLabelNode!
+    var nextLevelLabel: SKLabelNode!
     
     var leftButtonIsPressed = false
     var rightButtonIsPressed = false
@@ -35,10 +36,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var fruits: [String] = []
     var rareFruits: [String] = []
     var playerSkin: SkinType = .banana
+    var currentScore = 0
     var health = 3
+    var currentLevel = 1
     
     var createdFruits = 0
-    var currentScore = 0
     var highScore = 0
     var skinHighScore: [SkinType: Int] = [:]
     var minTimeToMoveFruit: CGFloat = 0
@@ -76,6 +78,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         configureLeftArrow()
         configureRightArrow()
         configureMultiScoreLabel()
+        configureNextLevelMessage()
         generateFruits()
     }
     
@@ -333,12 +336,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func getMoveTimeFruit(isRareFruit: Bool) -> CGFloat {
         let timeDuration: CGFloat
         
-        if createdFruits % 15 == 0 {
+        if createdFruits % 17 == 0 {
+            if currentLevel < 12 {
+                currentLevel += 1
+                sceneDelegate?.updateLevel(level: currentLevel)
+                showNextLevelLabel()
+            }
+            
             let reduceTime = Constants.reduceTimeToCreateFruit
             let reduceTimeRecreate = Constants.reduceTimeRecreate
             
-            minTimeToMoveFruit -= (minTimeToMoveFruit > 2.5) ? reduceTime : 0
-            maxTimeToMoveFruit -= (maxTimeToMoveFruit > 5.8) ? reduceTime : 0
+            minTimeToMoveFruit -= (minTimeToMoveFruit > 2.66) ? reduceTime : 0
+            maxTimeToMoveFruit -= (maxTimeToMoveFruit > 5.81) ? reduceTime : 0
             timeForRegenerateFruit -= (timeForRegenerateFruit > 0.75) ? reduceTimeRecreate : 0
         }
         
@@ -348,6 +357,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             timeDuration = CGFloat.random(in: minTimeToMoveFruit...maxTimeToMoveFruit)
         }
         return timeDuration
+    }
+    
+    func showNextLevelLabel() {
+        multiScoreLabel.isHidden = true
+        nextLevelLabel.isHidden = false
+        
+        let actionFade = SKAction.fadeAlpha(to: 0, duration: 1.2)
+        nextLevelLabel.run(actionFade) {
+            self.nextLevelLabel.isHidden = true
+            self.nextLevelLabel.alpha = 1.0
+        }
+    }
+    
+    func configureNextLevelMessage() {
+        let text = GameText.getAttributedText(for: Constants.newLevel, size: 40.0, strokeWidth: -6.0, strokeColor: .orange)
+        let position = CGPoint(x: frame.midX, y: frame.midY + 20)
+        
+        nextLevelLabel = SKLabelNode(attributedText: text)
+        nextLevelLabel.position = position
+        nextLevelLabel.isHidden = true
+        nextLevelLabel.zPosition = 2
+        addChild(nextLevelLabel)
     }
     
     func createHealth() {

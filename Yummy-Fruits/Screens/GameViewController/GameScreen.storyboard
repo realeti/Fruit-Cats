@@ -68,16 +68,25 @@
                                     <constraint firstAttribute="width" constant="28" id="rdY-cU-Uxr"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSa-zn-Xa8">
+                                <rect key="frame" x="20" y="190" width="390" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wGY-sQ-qWf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="2RW-jl-nYv"/>
+                            <constraint firstItem="rSa-zn-Xa8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="4PE-Ew-4dR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rSa-zn-Xa8" secondAttribute="trailing" constant="20" id="Dp7-m4-aTs"/>
                             <constraint firstItem="Hgu-MV-EW1" firstAttribute="trailing" secondItem="Kpr-no-aXx" secondAttribute="trailing" constant="-15" id="Gv7-jN-ayi"/>
                             <constraint firstItem="XQH-94-BzE" firstAttribute="centerY" secondItem="Kpr-no-aXx" secondAttribute="centerY" id="M5Z-KI-t6j"/>
                             <constraint firstItem="Kpr-no-aXx" firstAttribute="top" secondItem="wGY-sQ-qWf" secondAttribute="bottom" constant="8" id="Pvz-75-Ua8"/>
                             <constraint firstItem="Kpr-no-aXx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="SPF-DK-AqJ"/>
                             <constraint firstItem="wlk-w2-DO0" firstAttribute="leading" secondItem="wGY-sQ-qWf" secondAttribute="trailing" constant="20" id="TdR-Ab-ryd"/>
+                            <constraint firstItem="rSa-zn-Xa8" firstAttribute="top" secondItem="Kpr-no-aXx" secondAttribute="bottom" constant="15" id="fxx-W8-ig5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wlk-w2-DO0" secondAttribute="trailing" constant="20" id="itQ-g9-eGS"/>
                             <constraint firstItem="m7A-kS-OnF" firstAttribute="centerY" secondItem="Kpr-no-aXx" secondAttribute="centerY" id="itc-tS-oQQ"/>
                             <constraint firstItem="wGY-sQ-qWf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="lHn-BN-ebD"/>
@@ -92,6 +101,7 @@
                         <outlet property="imageHeart2" destination="XQH-94-BzE" id="rZP-9L-h0F"/>
                         <outlet property="imageHeart3" destination="Hgu-MV-EW1" id="hMT-Ev-a67"/>
                         <outlet property="imageHeartPlace" destination="Kpr-no-aXx" id="kvr-Bo-DR4"/>
+                        <outlet property="levelLabel" destination="rSa-zn-Xa8" id="lKN-sZ-a0t"/>
                         <outlet property="pauseButton" destination="wlk-w2-DO0" id="kbi-dI-wL7"/>
                         <outlet property="scoreLabel" destination="wGY-sQ-qWf" id="tqF-Rh-0h2"/>
                     </connections>

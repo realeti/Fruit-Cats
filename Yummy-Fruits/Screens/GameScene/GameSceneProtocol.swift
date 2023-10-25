@@ -10,6 +10,7 @@ import Foundation
 protocol GameSceneProtocol: AnyObject {
     func updateScore(score: Int)
     func updateHearts(heart: HeartList, isSubtract: Bool)
+    func updateLevel(level: Int)
     func pauseGame()
     func loadGameOverScene(score: Int)
 }

@@ -82,6 +82,8 @@ struct Constants {
     
     // MARK: Labels
     static let score = "Score"
+    static let level = "LVL"
+    static let newLevel = "New level!"
     static let pause = "Pause"
     static let bestRecords = "Best\nrecords"
     static let gameOver = "Game Over"

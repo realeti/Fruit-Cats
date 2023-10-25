@@ -14,6 +14,7 @@ class MainMenuViewController: UIViewController {
     @IBOutlet weak var recordsButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     
+    
     var fruitsStorage: FruitsStorageProtocol = FruitsStorage()
     var gameAudioPlayer: GameAudioProtocol = GameAudio.shared
     
