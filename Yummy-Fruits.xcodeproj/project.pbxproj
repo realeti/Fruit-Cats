@@ -305,7 +305,7 @@
 		C69DF9AE2AC082E800EF31BF = {
 			isa = PBXGroup;
 			children = (
-				C69DF9B92AC082E800EF31BF /* Fruit-Cats */,
+				C69DF9B92AC082E800EF31BF /* Yummy-Fruits */,
 				C69DF9B82AC082E800EF31BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -318,7 +318,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C69DF9B92AC082E800EF31BF /* Fruit-Cats */ = {
+		C69DF9B92AC082E800EF31BF /* Yummy-Fruits */ = {
 			isa = PBXGroup;
 			children = (
 				C6DE36282ACED20300502D40 /* Info.plist */,
@@ -330,7 +330,7 @@
 				C647141E2AC457EC00C31FC3 /* Screens */,
 				C69DF9BA2AC082E800EF31BF /* AppDelegate.swift */,
 			);
-			path = "Fruit-Cats";
+			path = "Yummy-Fruits";
 			sourceTree = "<group>";
 		};
 		C69F96E82AD30E9C00614C2E /* Hearts */ = {
