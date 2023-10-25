@@ -3,9 +3,9 @@
 _**English** | [Ukrainian](README.ua.md) | [Russian](README.ru.md)_
 
 Fruit-Cats - a simple 2D game, the essence of which is to collect fruits and set new records.
-* The level of play improves over time.
+* Over time the game level becomes more difficult.
 * There is a system for purchasing new skins.
-* There is a table of records for each skin
+* There is a table of records for each skin.
 * Usage Sprite Kit.
 
 ![14_3_test](https://github.com/realeti/Fruit-Cats/assets/30148823/399de592-6acf-41d8-ac64-90bb7ebd4545)
